@@ -53,6 +53,8 @@ function draw() {
  
   Engine.update(engine);
   ground.display();
+  //particles.display();
+  //plinkos.display();
   
   //display the plinkos 
   for (var i = 0; i < plinkos.length; i++) {
@@ -66,12 +68,12 @@ function draw() {
 
   //create the particles using frameCount
   if(frameCount%60===0){
-    particles.push(new particles(random(0,800),0))
+    particles.push(new Particles(random(0,800),0))
   }
 
   //display the particles 
   for (var k = 0; k < particles.length; k++) {
-    paricles[k].display();
+    particles[k].display();
   }
 
 }
